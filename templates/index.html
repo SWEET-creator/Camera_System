@@ -1,0 +1,13 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Flask Switch</title>
+</head>
+<body>
+    <form action="/toggle_script" method="post">
+        <button type="submit">{{ '停止' if is_running else '開始' }}</button>
+    </form>
+    <p>状態: {{ '実行中' if is_running else '停止中' }}</p>
+</body>
+</html>
